@@ -15,5 +15,78 @@
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
 <h1>每周進度</h1>
 <h2>week2</h2>
-<p>python 更新至3.8.2版</p><h1>test</h1>
+<p>python 從3.7.3更新至3.8.2版</p>
+<p>到<a href="https://www.python.org/downloads/release/python-382/">https://www.python.org/downloads/release/python-382/</a>下載<span>Windows x86-64 executable installer執行</span></p>
+<p><span><img alt="" height="200" src="/images/py install 01.png" width="330"/></span></p>
+<p><span><img alt="" height="200" src="/images/py install 02.png" width="330"/></span></p>
+<p><img alt="" height="200" src="/images/py install 03.png" width="330"/></p>
+<p><img alt="" height="200" src="/images/py install 04.png" width="330"/></p>
+<p>到剛剛的安裝位置複製pytho 3.8.2(此時我已改名稱為py38)</p>
+<p>貼到自己所建的data目錄下</p>
+<p><img caption="false" height="241" src="/images/data py.png" width="400"/></p>
+<p><span>下載 </span><span>”<span> </span><a href="https://www.scintilla.org/wscite432.zip">full 64-bit download，載完後解壓縮</a>，再複製到data底下</span></p>
+<p><span>在執行data\wscite432\wscite底下的SciTE.exe</span></p>
+<p>按照圖文開啟open Global Options File</p>
+<p><span><img alt="" height="400" src="/images/scite option.png" width="400"/></span></p>
+<p><span>到300行 更改( code.page=65001 、code.page=0)如圖下所示</span></p>
+<p><span><img alt="" height="400" src="/images/scite.png" width="400"/></span></p>
+<p>139行的#load.on.activate=1 把#刪掉 在存檔，在關閉scite</p>
+<p><span><img alt="" height="400" src="/images/scite load.png" width="400"/></span></p>
+<p>在data底下建立home</p>
+<p>打開scite 複製然後存成start.bat</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+ 
+%Disk%:
+ 
+set HomePath=%Disk%:\home
+set HomeDrive=%Disk%:\home
+set Home=%Disk%:\home
+set USERPROFILE=%Disk%:\home
+ 
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+ 
+#REM for putty
+#Set GIT_HOME=%CDisk%:\portablegit\bin\
+#Set GIT_SSH=%Disk%:\putty\plink.exe
+ 
+set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
+set PYTHONHOME=%Disk%:\py382
+ 
+set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
+set path_msys2=%Disk%:\msys64\mingw64\bin;
+set path_git=%Disk%:\portablegit\bin;
+set path_tcc=%Disk%:\tcc;
+ 
+path=%Disk%:;%path_python%;%path_msys2%;%path_git%;%path_tcc%;
+ 
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+ 
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+ 
+Exit</pre>
+<div class="line number1 index0 alt2"><code class="html plain"></code></div>
+<p>這個存成stop.bat</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+ 
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM scite.exe /F
+ 
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+ 
+EXIT</pre>
+<p>用到相關指令</p>
+<p>pip install (<span>flask,bs4,xml,elican, mrkdown,flask_cors,leo</span>)</p><h1>test</h1>
 <p>上傳測試</p>
