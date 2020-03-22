@@ -147,103 +147,10 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">CoppeliaSim << <a href='CoppeliaSim.html'>Previous</a> <a href='test.html'>Next</a> >> test<br /><h1>week2</h1>
-<p>python 從3.7.3更新至3.8.2版</p>
-<p>python:</p>
-<p>到<a href="https://www.python.org/downloads/release/python-382/">https://www.python.org/downloads/release/python-382/</a>下載<span>Windows x86-64 executable installer執行</span></p>
-<p><span><img alt="" height="200" src="./../images/py install 01.png" width="330"/></span></p>
-<p><span><img alt="" height="200" src="./../images/py install 02.png" width="330"/></span></p>
-<p><img alt="" height="200" src="./../images/py install 03.png" width="330"/></p>
-<p><img alt="" height="200" src="./../images/py install 04.png" width="330"/></p>
-<p>到剛剛的安裝位置複製pytho 3.8.2(此時我已改名稱為py38)</p>
-<p>貼到自己所建的data目錄下</p>
-<p><img caption="false" height="241" src="./../images/data py.png" width="400"/></p>
-<p><span>scite:</span></p>
-<p><span>下載 </span><span>”<span> </span><a href="https://www.scintilla.org/wscite432.zip">full 64-bit download，載完後解壓縮</a>，再複製到data底下</span></p>
-<p><span>在執行data\wscite432\wscite底下的SciTE.exe</span></p>
-<p>按照圖文開啟open Global Options File</p>
-<p><span><img alt="" height="400" src="./../images/scite option.png" width="400"/></span></p>
-<p><span>到300行 更改( code.page=65001 、code.page=0)如圖下所示</span></p>
-<p><span><img alt="" height="400" src="./../images/scite.png" width="400"/></span></p>
-<p>139行的#load.on.activate=1 把#刪掉 在存檔，在關閉scite</p>
-<p><span><img alt="" height="400" src="./../images/scite load.png" width="400"/></span></p>
-<p>在data底下建立home</p>
-<p><img alt="" height="74" src="./../images/data home.png" width="400"/></p>
-<p><img alt="" height="69" src="./../images/start&amp;stop.png" width="400"/></p>
-<p>打開scite 複製然後存成start.bat</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
-set Disk=y
-subst %Disk%: "data"
- 
-%Disk%:
- 
-set HomePath=%Disk%:\home
-set HomeDrive=%Disk%:\home
-set Home=%Disk%:\home
-set USERPROFILE=%Disk%:\home
- 
-REM 將系統 Python 程式的 io 設為 utf-8
-set PYTHONIOENCODING="utf-8"
- 
-#REM for putty
-#Set GIT_HOME=%CDisk%:\portablegit\bin\
-#Set GIT_SSH=%Disk%:\putty\plink.exe
- 
-set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
-set PYTHONHOME=%Disk%:\py382
- 
-set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
-set path_msys2=%Disk%:\msys64\mingw64\bin;
-set path_git=%Disk%:\portablegit\bin;
-set path_tcc=%Disk%:\tcc;
- 
-path=%Disk%:;%path_python%;%path_msys2%;%path_git%;%path_tcc%;
- 
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
-start /MIN cmd.exe
- 
-start /MIN %Disk%:\wscite432\wscite\SciTE.exe
-start /MIN %Disk%:\wscite432\wscite\SciTE.exe
- 
-Exit</pre>
-<div class="line number1 index0 alt2"><code class="html plain"></code></div>
-<p>這個存成stop.bat</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">@echo off
-set Disk=y
-path=%PATH%;
- 
-taskkill /IM python.exe /F
-taskkill /IM pythonw.exe /F
-taskkill /IM scite.exe /F
- 
-REM 終止虛擬硬碟與目錄的對應
-subst %Disk%: /D
-REM 關閉 cmd 指令視窗
-taskkill /IM cmd.exe /F
- 
-EXIT</pre>
-<p></p>
-<p>MSYS2：<a href="https://www.msys2.org/"><br/>https://www.msys2.org</a></p>
-<p>下載 msys2-x86_64-20190524.exe 並執行</p>
-<p><img alt="" height="285" src="./../images/MSYS2.png" width="400"/></p>
-<p>在data底下建立msys64 並安裝此位置</p>
-<p><img alt="" height="285" src="./../images/MSYS2 01.png" width="400"/></p>
-<p><img alt="" height="285" src="./../images/MSYS2.png" width="400"/></p>
-<p><img alt="" height="284" src="./../images/MSYS203.png" width="400"/></p>
-<p><span>PortableGit：</span><br/><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><span>下載64-bit Git for Windows Portable安裝在data目錄</span><span>下</span></p>
-<p><img alt="" height="153" src="./../images/git 01.png" width="357"/></p>
-<p><img alt="" height="120" src="./../images/pip-1.png" width="400"/></p>
-<p></p>
-<p></p>
-<p><span>Tiny C Compiler：<br/></span><span><a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a> </span></p>
-<p><span>git clone 整個倉儲到 data 目錄下並命名目錄為 tcc</span></p>
-<p><span><img alt="" height="40" src="./../images/git02.png" width="400"/></span></p>
-<p><span>git config --global http.proxy [2001:288:6004:17::53]:3128 </span></p>
-<p></p>
-<p>用到相關指令</p>
-<p>pip install (<span>flask,bs4,xml,elican, mrkdown,flask_cors,leo</span>)</p><br />CoppeliaSim << <a href='CoppeliaSim.html'>Previous</a> <a href='test.html'>Next</a> >> test</div>
+    <div id="tipue_search_content">week3 << <a href='week3.html'>Previous</a> <a href='week2.html'>Next</a> >> week2<br /><h1>CoppeliaSim</h1>
+<p><a href="http://coppeliarobotics.com/">CoppeliaSim</a>高度可定制的模擬器，可以自定義模擬的每個方面。此外模擬器本身可以進行定制，以使性能完全符合要求。</p>
+<p>這可以通過精心設計的應用程序編程接口（API）來實現。</p>
+<p>支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點（顯然還有缺點），但所有六種方法都是相互兼容的（即可以同時使用，甚至可以協同使用）。</p><br />week3 << <a href='week3.html'>Previous</a> <a href='week2.html'>Next</a> >> week2</div>
         
     <!-- footer -->
       <div class="container">
