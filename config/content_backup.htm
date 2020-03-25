@@ -131,7 +131,8 @@ EXIT</pre>
 <p>具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本、插件、ROS節點、BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。 這使CoppeliaSim非常通用，非常適合多機器人應用。 控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p>以下只是CoppeliaSim的部分應用程序：</p>
 <p>工廠自動化系統仿真<br/>遠程監控<br/>硬件控制<br/>快速原型製作和驗證<br/>安全監控<br/>快速算法開發<br/>機器人相關教育<br/>產品介紹</p>
-<p>CoppeliaSim可以用作獨立應用程序，也可以輕鬆地嵌入到主客戶端應用程序中：它的佔用空間小且精心設計的API使CoppeliaSim成為嵌入更高級別應用程序的理想選擇。 集成的Lua腳本解釋器使CoppeliaSim成為了一種極其通用的應用程序，使用戶可以自由組合低級/高級功能以獲得新的高級功能。</p><h2>week4</h2>
+<p>CoppeliaSim可以用作獨立應用程序，也可以輕鬆地嵌入到主客戶端應用程序中：它的佔用空間小且精心設計的API使CoppeliaSim成為嵌入更高級別應用程序的理想選擇。 集成的Lua腳本解釋器使CoppeliaSim成為了一種極其通用的應用程序，使用戶可以自由組合低級/高級功能以獲得新的高級功能。</p>
+<h2>week4</h2>
 <p>如何解決無法提供長久服務</p>
 <p>parse</p>
 <p></p>
@@ -141,7 +142,8 @@ EXIT</pre>
 <p>機器人設計工具可以透過v-rep裡的模擬平台，加入相關引擎、物理碰撞等旋轉功能。</p>
 <p>v-rep是一款靈活、可拓展的通用機器人模擬器，支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點（顯然還有缺點），但所有六種方法都是相互兼容的（即可以同時使用，甚至可以協同使用）。</p>
 <p>這可以通過精心設計的應用程序編程接口（API）來實現。<br/><br/></p>
-<p>主要特色 : <a href="https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm">https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm</a></p><h2>環境</h2>
+<p>主要特色 : <a href="https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm">https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm</a></p>
+<h2>環境</h2>
 <p>scenes</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
 <p>場景和模型是CoppeliaSim的主要模擬元素。 模型是場景的子元素，明確標記為模型。</p>
@@ -153,10 +155,25 @@ EXIT</pre>
 <p><span>environment</span></p>
 <p><span><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></span></p>
 <p><span>CoppeliaSim中的環境定義了屬於場景但不屬於場景對象的屬性和參數。 保存模型時不保存環境屬性和參數，而僅保存場景時不保存。</span></p>
+<p><span>entities</span></p>
+<p><span><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></span></p>
+<p><span>實體是指場景對像或集合的術語。 </span></p>
+<h2>Calculation modules</h2>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
+<p><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/collisionDetection.htm">Collision detection</a> : 與碰撞檢測有關的屬性。</strong></p>
+<p><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/distanceCalculation.htm">Distance calculation</a> : 與最小距離計算有關的屬性。</strong></p>
+<p><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/ikDialog.htm">Inverse kinematics</a> : 與逆運動學相關的屬性。</strong></p>
+<p><strong></strong><strong><a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsDialog.htm">Dynamics</a> : 與動力學有關的屬性。</strong></p>
+<p><strong>備註:</strong></p>
+<p><strong>逆力學是決定要達成所需姿勢所設置的關節可動對象的參數過程</strong></p>
+<p><strong></strong></p>
+<h2>Simulation</h2>
+<p><strong><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></strong></p><h2>Tutorials</h2>
+<p><strong></strong></p>
 <p><span></span></p>
-<p><span></span></p>
-<p></p><h1>小組會議</h1>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p><h1>小組會議</h1>
 <p>week3</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/c06esX1zO90" width="560"></iframe></p><h1>問題</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/c06esX1zO90" width="560"></iframe></p>
+<h1>問題</h1>
 <p>當 git pull 發生錯誤可以用這個指令回到舊版本</p>
 <p><span>git </span><span class="hljs-keyword">reset</span><span> </span><span class="hljs-comment">--hard</span></p>
