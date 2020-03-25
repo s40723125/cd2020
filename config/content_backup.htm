@@ -8,7 +8,8 @@
 <p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p><h1>Develop</h1>
+<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
+<h1>Develop</h1>
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
@@ -16,7 +17,9 @@
 <p>week2</p>
 <p>python3.8.2</p>
 <p>week3</p>
-<p>CoppeliaSim</p><h2>week3</h2>
+<p>CoppeliaSim</p>
+<h2>week4</h2>
+<p>如何解決無法提供長久服務</p><h2>week3</h2>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
 <p>具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本、插件、ROS節點、BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。 這使CoppeliaSim非常通用，非常適合多機器人應用。 控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p>以下只是CoppeliaSim的部分應用程序：</p>
@@ -25,7 +28,8 @@
 <h3>CoppeliaSim</h3>
 <p><a href="http://coppeliarobotics.com/">CoppeliaSim</a>高度可定制的模擬器，可以自定義模擬的每個方面。此外模擬器本身可以進行定制，以使性能完全符合要求。</p>
 <p>這可以通過精心設計的應用程序編程接口（API）來實現。</p>
-<p>支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點（顯然還有缺點），但所有六種方法都是相互兼容的（即可以同時使用，甚至可以協同使用）。</p><h2>week2</h2>
+<p>支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點（顯然還有缺點），但所有六種方法都是相互兼容的（即可以同時使用，甚至可以協同使用）。</p>
+<h2>week2</h2>
 <p>python 從3.7.3更新至3.8.2版</p>
 <p>python:</p>
 <p>到<a href="https://www.python.org/downloads/release/python-382/">https://www.python.org/downloads/release/python-382/</a>下載<span>Windows x86-64 executable installer執行</span></p>
@@ -121,5 +125,4 @@ EXIT</pre>
 <p><span>git config --global http.proxy [2001:288:6004:17::53]:3128 </span></p>
 <p></p>
 <p>用到相關指令</p>
-<p>pip install (<span>flask,bs4,xml,elican, mrkdown,flask_cors,leo</span>)</p><h1>test</h1>
-<p>上傳測試</p>
+<p>pip install (<span>flask,bs4,xml,elican, mrkdown,flask_cors,leo</span>)</p>
