@@ -192,8 +192,7 @@ EXIT</pre>
 <p>雙擊<img alt="" height="462" src="/images/雙機.png" width="1175"/></p>
 <p>密碼跟帳號一樣kmol2020</p>
 <p>按windows鍵</p>
-<p>選擇LXTerminal</p>
-<h2>week12</h2>
+<p>選擇 Xterm</p><h2>week12</h2>
 <p>onshape分工</p>
 <p>確認各個隊員都有任務</p>
 <p>確定尺寸大小以確保分工時更快速</p>
@@ -204,7 +203,8 @@ EXIT</pre>
 <p>之後會請隊友使用我們繪製的車子導入 v-rep進行模擬與測試。</p>
 <p><img alt="" height="397" src="/images/註解 2020-05-31 203248.png" width="546"/></p>
 <p>.</p>
-<p></p><h1>CoppeliaSim 介紹</h1>
+<p></p>
+<h1>CoppeliaSim 介紹</h1>
 <p>下載</p>
 <p><a href="https://www.coppeliarobotics.com/downloads">https://www.coppeliarobotics.com/downloads</a></p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
@@ -253,6 +253,38 @@ EXIT</pre>
 <p></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/8FvCDIbN1OQ" width="560"></iframe></p>
 <p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Aga2G_AivTk" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1oyAeMYIjGw" width="560"></iframe></p>
+<p></p>
+<h1>ubuntu</h1>
+<p>先執行<a href="https://s40723125.github.io/cd2020/content/week11.html">w11步驟</a>後才能進行以下步驟</p>
+<p>在Xterm 輸入指令ifconfig查看網路位置</p>
+<p>尚未安裝 net-tools輸入指令安裝</p>
+<p>sudo apt install net-tools</p>
+<p>之後 cd /etc/netplan</p>
+<p>ls -l</p>
+<p>sudo vi 00-installer-config.yaml</p>
+<p>之後確認與圖一樣<img alt="" height="222" src="/images/1590931648694.jpg" width="512"/></p>
+<p>會用到指令 (i)(進入修改)、ctrl+c(切換模式)、:q!(不儲存離開)、:wq(儲存離開)</p>
+<p>virtualbox 設定網路</p>
+<p><img alt="" height="301" src="/images/ipv4.png" width="360"/></p>
+<p><img alt="" height="302" src="/images/ipv6.png" width="360"/></p>
+<p>打開<a href="https://github.com/s40723110/cd2020/raw/master/downloads/putty.zip">putty</a></p>
+<p>設定 host name 為 127.0.0.1 port 22</p>
+<p>shh / x11 底下</p>
+<p>x display location :   localhost:0.0</p>
+<p>open</p>
+<p>在ubuntu打開 file manager /tmp 查看cd2020pj1位置</p>
+<p>在tmp下建立 oauth_gm.txt</p>
+<p>再到putty 輸入 xtrem&amp; (要先有此程式<a href="https://sourceforge.net/projects/xming/files/latest/download">x11</a>)</p>
+<p>之後會自行開啟x11</p>
+<p>在cd tmp</p>
+<p>cd cd2020pj1</p>
+<p>python3 wsgi.py</p>
+<p>就能開啟靜端了</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 <p></p><h1>問題</h1>
 <p>當 git pull 發生錯誤可以用這個指令回到舊版本</p>
 <p><span>git </span><span class="hljs-keyword">reset</span><span> </span><span class="hljs-comment">--hard</span></p>
